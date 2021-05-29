@@ -1,0 +1,41 @@
+---
+pagination:
+   data: zvirata
+   size: 1
+   alias: zvire
+permalink: "zvirata/{{ zvire.nazev | slug }}/"
+layout: layouts/stranka
+
+---
+
+<article class="animal-detail">
+	<h2 class="animal-detail__title">{{ zvire.nazev }}</h2>
+	<h3 class="animal-detail__latin">{{ zvire.nazevLatinsky}}</h3>
+
+	<div class="animal-detail__content">
+		<div class="animal-detail__text">
+			<p>{{ zvire.popis }}</p>
+
+			<table class="animal-detail__table">
+				<tr>
+					<th> {{ zvire.domovina }} </th>
+					<td>xxx</td>
+				</tr>
+				<tr>
+					<th> {{ zvire.biotop }}</th>
+					<td>xxx</td>
+				</tr>
+				<tr>
+					<th>{{ zvire.potrava }}</th>
+					<td>xxx</td>
+				</tr>
+				<tr>
+					<th>{{ zvire.velikost }}</th>
+					<td>xxx</td>
+				</tr>
+			</table>
+		</div>
+
+		<img class="animal-detail__image" src="/images/{{ zvire.foto }}" alt=" {{ zvire.nazev }}">
+	</div>
+</article>
